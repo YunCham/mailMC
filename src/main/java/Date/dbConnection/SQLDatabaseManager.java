@@ -41,6 +41,15 @@ public class SQLDatabaseManager {
         return connection;
     }
 
+    public static Connection getConnection(String url, String user, String password) throws SQLException {
+        try {
+            Class.forName("org.postgresql.Driver"); // O el driver de tu base de datos
+            return DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Error al cargar el driver de la base de datos.", e);
+        }
+    }
+
 
     /**
      * Cierra la conexion a la base de datos

@@ -1,0 +1,12 @@
+db.url=jdbc:postgresql://localhost:5432/megacenter
+db.namedb=nombre dela bd
+db.username= user name
+db.password= pass
+
+# Configuración de correo
+mail.smtp.host= host del servidor
+mail.smtp.port=110
+mail.pop.port=25
+mail.smtp.user= user name
+mail.smtp.username=correo origen del servidor
+mail.smtp.password= passs
