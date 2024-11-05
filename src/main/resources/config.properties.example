@@ -1,12 +1,13 @@
+# Configuración de base de datos
 db.url=jdbc:postgresql://localhost:5432/megacenter
-db.namedb=nombre dela bd
-db.username= user name
-db.password= pass
+db.namedb=megacenter
+db.username=root
+db.password=root
 
-# ConfiguraciÃ³n de correo
-mail.smtp.host= host del servidor
+# Configuración de correo
+mail.smtp.host=mail.tecnoweb.org.bo
 mail.smtp.port=110
 mail.pop.port=25
-mail.smtp.user= user name
-mail.smtp.username=correo origen del servidor
-mail.smtp.password= passs
+mail.smtp.username=grupo13sa@tecnoweb.org.bo
+mail.smtp.user=grupo13sa
+mail.smtp.password=grup013grup013*

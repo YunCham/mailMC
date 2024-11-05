@@ -1,5 +1,6 @@
-package Utils;
+package utils;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -8,17 +9,17 @@ public class Config {
     private static Properties properties = new Properties();
 
     static {
-        try (InputStream input = Config.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = Config.class.getClassLoader().getResourceAsStream("config.properties")){
             if (input == null) {
-                throw new RuntimeException("Lo siento, no se encontro el archivo de configuracion.");
+                throw new RuntimeException("Lo siento  archivo de configuracion no encontrado...");
             }
             properties.load(input);
-        } catch (IOException ex) {
+        }catch (IOException ex){
             ex.printStackTrace();
         }
     }
 
-// Credenciales para la Base de datos
+    // Credenciales para la Base de datos
     public static String getDbUrl() {
         return properties.getProperty("db.url");
     }
@@ -35,7 +36,7 @@ public class Config {
         return properties.getProperty("db.password");
     }
 
-    // Credenciales para las Email
+    // Credenciales para SERVER Email
     public static String getMailSmtpHost() {
         return properties.getProperty("mail.smtp.host");
     }
@@ -60,4 +61,5 @@ public class Config {
     public static String getMailSmtpPassword() {
         return properties.getProperty("mail.smtp.password");
     }
+
 }
